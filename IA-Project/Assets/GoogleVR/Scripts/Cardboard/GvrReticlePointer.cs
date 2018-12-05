@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 /// Draws a circular reticle in front of any object that the user points at.
@@ -70,13 +71,17 @@ public class GvrReticlePointer : GvrBasePointer {
 
   public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
-  }
+      
+    }
 
   public override void OnPointerHover(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
-  }
 
-  public override void OnPointerExit(GameObject previousObject) {
+       
+
+    }
+
+    public override void OnPointerExit(GameObject previousObject) {
     ReticleDistanceInMeters = maxReticleDistance;
     ReticleInnerAngle = RETICLE_MIN_INNER_ANGLE;
     ReticleOuterAngle = RETICLE_MIN_OUTER_ANGLE;
@@ -84,7 +89,9 @@ public class GvrReticlePointer : GvrBasePointer {
 
   public override void OnPointerClickDown() {}
 
-  public override void OnPointerClickUp() {}
+  public override void OnPointerClickUp() {
+       
+    }
 
   public override void GetPointerRadius(out float enterRadius, out float exitRadius) {
     float min_inner_angle_radians = Mathf.Deg2Rad * RETICLE_MIN_INNER_ANGLE;
@@ -186,9 +193,10 @@ public class GvrReticlePointer : GvrBasePointer {
 
       vertices[vi++] = new Vector3(x, y, 0.0f); // Outer vertex.
       vertices[vi++] = new Vector3(x, y, 1.0f); // Inner vertex.
-    }
-    #endregion
-
+          
+        }
+        #endregion
+      
     #region Triangles
     int indices_count = (segments_count+1)*3*2;
     int[] indices = new int[indices_count];
@@ -215,5 +223,7 @@ public class GvrReticlePointer : GvrBasePointer {
     // Optimize() is deprecated as of Unity 5.5.0p1.
     mesh.Optimize();
 #endif  // !UNITY_5_5_OR_NEWER
+
+       
   }
 }

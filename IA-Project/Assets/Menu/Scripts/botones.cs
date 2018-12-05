@@ -18,11 +18,19 @@ public class botones : MonoBehaviour {
         {
             BtnPlay();
         }
+        else if(Input.GetButton("Fire1"))
+        {
+            Btnplay2();
+        }
 	}
 
     public void BtnPlay()
     {
      SceneManager.LoadScene("carro");
+    }
+    public void Btnplay2()
+    {
+        SceneManager.LoadScene("analogia2");
     }
     public void BtnEstadisticas()
     {
