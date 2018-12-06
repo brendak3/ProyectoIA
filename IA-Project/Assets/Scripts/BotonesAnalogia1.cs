@@ -16,11 +16,11 @@ public class BotonesAnalogia1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButton("Fire1")) //respuesta correcta
+        if (Input.GetButton("Fire4")) //respuesta correcta
         {
             Reproducir();
         }
-        else if(Input.GetButton("Fire2")) //Respuesta correcta
+        else if(Input.GetButton("Fire5")) //Respuesta correcta
         {
             clipcompleto.GetComponent<AudioSource>().Play();
         }
