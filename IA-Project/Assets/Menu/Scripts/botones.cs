@@ -14,11 +14,11 @@ public class botones : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire4"))
         {
             BtnPlay();
         }
-        else if(Input.GetButton("Fire1"))
+        else if(Input.GetButton("Fire5"))
         {
             Btnplay2();
         }
