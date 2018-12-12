@@ -26,7 +26,9 @@ public class botones : MonoBehaviour {
 
     public void BtnPlay()
     {
-     SceneManager.LoadScene("carro");
+        DataBase db = new DataBase();
+        //db.InsertarRegistro();
+        SceneManager.LoadScene("carro");
     }
     public void Btnplay2()
     {
